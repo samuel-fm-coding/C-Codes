@@ -11,7 +11,7 @@ int main()
 {
 	setlocale(LC_ALL, "Portuguese");
 	
-	char l;
+
 	int escolha = 0;
 	int len = sizeof(valores) / sizeof(valores[0]);
     
@@ -29,14 +29,14 @@ int main()
 	            printf("\nDigite um valor inteiro: ");
 			    scanf("%d", &valores[cont]);
 			    
-			    printf("\nNúmero %d inserido na posição %d", valores[cont], cont);
+			    printf("\nNÃºmero %d inserido na posiÃ§Ã£o %d", valores[cont], cont);
 			    cont++;
 			    printf("\n\nInserido\n\n");	
 			}
 			else{
 				printf("Pilha cheia\n\n");
 			}
-            printf("\n\nTecle Enter para prosseguir");
+            system("PAUSE");
 			getchar();
 		    main();
 		    break;
@@ -44,8 +44,8 @@ int main()
 			system("cls");
 			valores[cont-1] = NULL;
 			cont--;
-			printf("\n\nO último elemento da pilha foi removido\n\n");
-			printf("\n\nTecle Enter para prosseguir");
+			printf("\n\nO Ãºltimo elemento da pilha foi removido\n\n");
+			system("PAUSE");
 			getchar();
 			main();
 			break;
@@ -53,10 +53,10 @@ int main()
 			system("cls");
 			for(int j = 4; j>=0; j--){
 				if(valores[j] != NULL){
-					printf("\nPosição %d -> %d", j, valores[j]);	
+					printf("\nPosiÃ§Ã£o %d -> %d", j, valores[j]);	
 				}
 			}
-			printf("\n\nTecle Enter para prosseguir");
+			system("PAUSE");
 			getchar();
 			main();
 			break;
