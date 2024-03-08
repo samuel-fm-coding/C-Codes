@@ -36,6 +36,7 @@ int main()
 			else{
 				printf("Pilha cheia\n\n");
 			}
+			printf("\n");
             system("PAUSE");
 			getchar();
 		    main();
@@ -45,6 +46,7 @@ int main()
 			valores[cont-1] = NULL;
 			cont--;
 			printf("\n\nO último elemento da pilha foi removido\n\n");
+			printf("\n");
 			system("PAUSE");
 			getchar();
 			main();
@@ -56,6 +58,7 @@ int main()
 					printf("\nPosição %d -> %d", j, valores[j]);	
 				}
 			}
+			printf("\n");
 			system("PAUSE");
 			getchar();
 			main();
