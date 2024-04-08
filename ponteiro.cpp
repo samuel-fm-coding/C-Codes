@@ -3,7 +3,7 @@
 #include <locale.h>
 
 
-main(){
+int main(){
 	setlocale(LC_ALL, "Portuguese");
 	
 	int *ponteiro;
@@ -13,5 +13,7 @@ main(){
 	printf("Digite um número inteiro: "); //usuario digita um valor pra armazenar na memória
 	scanf("%d", ponteiro);
 	
-	printf("\n\nValor %d armazenado no endereço %d", *ponteiro, ponteiro); //exibo valor(*) e endereço		
+	printf("\n\nValor %d armazenado no endereço %d", *ponteiro, ponteiro); //exibo valor(*) e endereço	
+
+	return 0;
 }
