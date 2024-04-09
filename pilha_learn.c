@@ -4,7 +4,7 @@
 
 int dado[max];
 int topo = 0;
-int op;
+int option;
 
 void exibir(void) {
 	printf("\n");
@@ -53,8 +53,8 @@ int menu() {
 	printf("   Para exibir digite       3\n");
 	printf("   Para exibir o topo       4\n");
 	printf("   Para sair                5\n");
-	scanf("%d", &op);
-	switch(op) {
+	scanf("%d", &option);
+	switch(option) {
 		case 1:
 			inserir();
 			break;
@@ -80,7 +80,7 @@ int menu() {
 }
 
 int main() {
-	while(op != 4) {
+	while(option != 4) {
 		system("cls");
 		menu();
 	}
