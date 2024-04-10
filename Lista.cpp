@@ -33,12 +33,9 @@ void exibir() {
 void inserir() {
 	system("cls");
 	
-	int vet[max-1];
-	
 	for(int i = 0; i < max; i++){
 		if(lista[i] == NULL){
-			vet[i] = i;
-			printf("\nA posição %d está vazia", vet[i]);
+			printf("\nA posição %d está vazia", i);
 		}
 	}
 	
