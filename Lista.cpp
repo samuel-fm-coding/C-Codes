@@ -79,7 +79,7 @@ void remover() {
 	}
 }
 
-int menu() {
+void menu() {
 	setlocale(LC_ALL, "Portuguese");
 	system("cls");
 	
@@ -115,14 +115,11 @@ int menu() {
 			system("PAUSE");
 			break;
 	}
-	
-	return 0;
 }
 
-int main() {
+main() {
 	while(op != 4) {
 		system("cls");
 		menu();
 	}
-	return 0;
 }
