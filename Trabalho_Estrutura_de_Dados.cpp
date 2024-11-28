@@ -31,10 +31,10 @@ void atualizarAltura(No* no) {
 
 No* rotacaoDireita(No* y) {
     No* x = y->esquerda;
-    No* T2 = x->direita;
+    No* x_d = x->direita;
 
     x->direita = y;
-    y->esquerda = T2;
+    y->esquerda = x_d;
 
     atualizarAltura(y);
     atualizarAltura(x);
@@ -44,10 +44,10 @@ No* rotacaoDireita(No* y) {
 
 No* rotacaoEsquerda(No* x) {
     No* y = x->direita;
-    No* T2 = y->esquerda;
+    No* y_e = y->esquerda;
 
     y->esquerda = x;
-    x->direita = T2;
+    x->direita = y_e;
 
     atualizarAltura(x);
     atualizarAltura(y);
@@ -201,7 +201,6 @@ void exibirEmGrafo(No* no, int nivel = 0) {
         exibirEmGrafo(no->esquerda, nivel + 1);
     }
 }
-
 
 int main() {
 	setlocale(LC_ALL, "Portuguese");
