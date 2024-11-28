@@ -86,7 +86,12 @@ No* balancear(No* no) {
 
 No* inserir(No* no, int valor) {
     if (!no) return new No(valor);
-
+	
+	if (valor == no->valor) {
+        cout << "O valor informado já existe na árvore!\n";
+        return no;
+    }
+		
     if (valor < no->valor)
         no->esquerda = inserir(no->esquerda, valor);
     else if (valor > no->valor)
@@ -166,6 +171,11 @@ No* editar(No* no, int antigoValor, int novoValor) {
     if (!no) return no;
 
     if (antigoValor == no->valor) {
+    	if (buscar(no, novoValor)) {
+            cout << "O valor informado já existe na árvore!\n";
+            return no;
+        }
+    	
         no->valor = novoValor;
         return no;
     } else if (antigoValor < no->valor) {
