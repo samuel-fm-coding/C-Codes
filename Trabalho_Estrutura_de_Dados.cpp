@@ -1,7 +1,6 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-#include <queue>
 #include <algorithm>
 #include <locale.h>
 
@@ -86,11 +85,6 @@ No* balancear(No* no) {
 
 No* inserir(No* no, int valor) {
     if (!no) return new No(valor);
-	
-	if (valor == no->valor) {
-        cout << "O valor informado já existe na árvore!\n";
-        return no;
-    }
 		
     if (valor < no->valor)
         no->esquerda = inserir(no->esquerda, valor);
@@ -98,7 +92,7 @@ No* inserir(No* no, int valor) {
         no->direita = inserir(no->direita, valor);
     else
         return no;
-
+        
     return balancear(no);
 }
 
@@ -177,6 +171,7 @@ No* editar(No* no, int antigoValor, int novoValor) {
         }
     	
         no->valor = novoValor;
+        cout << "\nValor editado com sucesso!\n";
         return no;
     } else if (antigoValor < no->valor) {
         no->esquerda = editar(no->esquerda, antigoValor, novoValor);
@@ -292,7 +287,6 @@ int main() {
                 cout << "\nDigite o novo valor: ";
                 cin >> novoValor;
                 arvore = editar(arvore, valor, novoValor);
-                cout << "\nValor editado com sucesso!\n";
                 break;
             case 10:
             	system("cls");
